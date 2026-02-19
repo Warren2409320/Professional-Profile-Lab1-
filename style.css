@@ -1,0 +1,161 @@
+:root {
+  --bg: #0b1220;
+  --card: #111a2e;
+  --text: #e8eefc;
+  --muted: #b9c4e2;
+  --brand: #4dd4ff;
+  --border: rgba(255,255,255,0.12);
+
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(960px, 92vw);
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+/* HEADER */
+.site-header {
+  padding: 16px 4vw;
+  border-bottom: 1px solid var(--border);
+  background: rgba(17, 26, 46, 0.75);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.04);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.tagline {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* NAV */
+.site-nav {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: rgba(255,255,255,0.03);
+}
+
+/* pseudo-class requirement */
+.site-nav a:hover {
+  border-color: var(--border);
+  color: var(--brand);
+}
+
+/* SECTIONS / CARDS */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 18px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+/* ABOUT layout */
+.about-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* Center and round the image (requirement) */
+.profile-image-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(77, 212, 255, 0.35);
+}
+
+/* small content box */
+.info-box {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+}
+
+.hobby-list, .social-links {
+  padding-left: 18px;
+}
+
+.note {
+  margin-top: 12px;
+  padding: 12px;
+  border-left: 4px solid var(--brand);
+  background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+}
+
+/* Links general */
+a { color: var(--brand); }
+a:hover { text-decoration: underline; }
+
+/* FOOTER */
+.site-footer {
+  padding: 18px 4vw;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.footer-small a {
+  color: var(--text);
+}
+
+/* Optional: make About section 2 columns on wider screens */
+@media (min-width: 700px) {
+  .about-grid {
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+  }
+}
