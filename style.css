@@ -75,13 +75,13 @@ h1 {
   border-radius: 8px;
 }
 
-/* pseudo-class requirement */
+/* pseudo-class */
 .site-nav a:hover {
   background: #f1f5f9;
   color: var(--brand);
 }
 
-/* Cards / sections */
+/* sections */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -100,7 +100,7 @@ h1 {
   gap: 16px;
 }
 
-/* Center and round the image (requirement) */
+/* Center and round the image */
 .profile-image-wrap {
   display: flex;
   justify-content: center;
