@@ -1,13 +1,13 @@
 :root {
-  --bg: #0b1220;
-  --card: #111a2e;
-  --text: #e8eefc;
-  --muted: #b9c4e2;
-  --brand: #4dd4ff;
-  --border: rgba(255,255,255,0.12);
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #c1121f;     /* red accent */
+  --border: #e5e7eb;
 
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  --radius: 16px;
+  --font: Arial, sans-serif;
+  --radius: 12px;
 }
 
 * { box-sizing: border-box; }
@@ -21,16 +21,17 @@ body {
 }
 
 .container {
-  width: min(960px, 92vw);
+  width: 92%;
+  max-width: 960px;
   margin: 0 auto;
   padding: 24px 0 40px;
 }
 
-/* HEADER */
+/* Header */
 .site-header {
   padding: 16px 4vw;
+  background: var(--card);
   border-bottom: 1px solid var(--border);
-  background: rgba(17, 26, 46, 0.75);
 }
 
 .header-left {
@@ -42,16 +43,17 @@ body {
 .icon {
   width: 44px;
   height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: #fafafa;
 }
 
 h1 {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .tagline {
@@ -60,35 +62,31 @@ h1 {
   font-size: 0.95rem;
 }
 
-/* NAV */
+/* Nav */
 .site-nav {
   margin-top: 12px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
 }
 
 .site-nav a {
   color: var(--text);
   text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  background: rgba(255,255,255,0.03);
+  margin-right: 14px;
+  padding: 8px 10px;
+  border-radius: 8px;
 }
 
 /* pseudo-class requirement */
 .site-nav a:hover {
-  border-color: var(--border);
+  background: #f1f5f9;
   color: var(--brand);
 }
 
-/* SECTIONS / CARDS */
+/* Cards / sections */
 .card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 18px;
   margin-top: 18px;
 }
 
@@ -96,7 +94,7 @@ h1 {
   margin-top: 0;
 }
 
-/* ABOUT layout */
+/* About layout */
 .about-grid {
   display: grid;
   gap: 16px;
@@ -113,16 +111,16 @@ h1 {
   height: 160px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid rgba(77, 212, 255, 0.35);
+  border: 3px solid #f3f4f6;
 }
 
-/* small content box */
+/* Info box */
 .info-box {
   margin-top: 10px;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 10px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: #fafafa;
 }
 
 .hobby-list, .social-links {
@@ -133,26 +131,32 @@ h1 {
   margin-top: 12px;
   padding: 12px;
   border-left: 4px solid var(--brand);
-  background: rgba(255,255,255,0.03);
-  border-radius: 12px;
+  background: #fff5f5;
+  border-radius: 10px;
 }
 
-/* Links general */
-a { color: var(--brand); }
-a:hover { text-decoration: underline; }
+/* Links */
+a {
+  color: var(--brand);
+}
 
-/* FOOTER */
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 .site-footer {
   padding: 18px 4vw;
   border-top: 1px solid var(--border);
   color: var(--muted);
+  background: var(--card);
 }
 
 .footer-small a {
   color: var(--text);
 }
 
-/* Optional: make About section 2 columns on wider screens */
+/* Two columns on wider screens */
 @media (min-width: 700px) {
   .about-grid {
     grid-template-columns: 220px 1fr;
