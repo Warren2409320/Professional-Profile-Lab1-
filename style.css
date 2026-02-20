@@ -127,14 +127,6 @@ h1 {
   padding-left: 18px;
 }
 
-.note {
-  margin-top: 12px;
-  padding: 12px;
-  border-left: 4px solid var(--brand);
-  background: #fff5f5;
-  border-radius: 10px;
-}
-
 /* Links */
 a {
   color: var(--brand);
